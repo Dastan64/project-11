@@ -406,6 +406,24 @@ li {
   list-style: none;
 }
 
+/**************TEMPLATE******************/
+
+.news__piece-btn,
+.gallery__prev-btn,
+.gallery__next-btn,
+.contact__route-btn,
+.contact__feedback-btn,
+.booking__form-btn {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px 35px;
+}
+
+/*******************************************/
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -449,9 +467,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -460,7 +475,11 @@ body {
           justify-content: center;
   height: 100%;
   width: 30%;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   background-color: #000;
+  z-index: 2;
 }
 
 .header .menu-active {
@@ -740,26 +759,7 @@ body {
   font-size: 0.875rem;
 }
 
-.news__piece-btn,
-.gallery__prev-btn,
-.gallery__next-btn,
-.contact__route-btn,
-.contact__feedback-btn,
-.booking__form-btn {
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  text-transform: uppercase;
-  border: none;
-  padding: 20px 35px;
-}
-
-.news__piece-btn:focus,
-.gallery__prev-btn:focus,
-.gallery__next-btn:focus,
-.contact__route-btn:focus,
-.contact__feedback-btn:focus,
-.booking__form-btn:focus {
+.news__piece-btn:focus {
   outline: none;
   -webkit-box-shadow: 0px 0px 20px black;
           box-shadow: 0px 0px 20px black;
@@ -792,11 +792,12 @@ body {
 
 .gallery__prev-btn,
 .gallery__next-btn {
+  width: 140px;
   padding: 20px 50px;
 }
 
-.gallery__next-btn {
-  margin-left: 20px;
+.gallery__prev-btn {
+  margin: 0 20px 20px 0;
 }
 
 .contact-booking-wrapper {
@@ -831,11 +832,12 @@ body {
 
 .contact__route-btn,
 .contact__feedback-btn {
+  width: 140px;
   margin-top: 30px;
 }
 
-.contact__feedback-btn {
-  margin-left: 20px;
+.contact__route-btn {
+  margin-right: 20px;
 }
 
 .booking {
@@ -1151,6 +1153,10 @@ body {
     margin-bottom: 40px;
   }
 
+  .news-gallery-wrapper {
+    margin-top: 30px;
+  }
+
   .news__wrapper,
   .contact__wrapper {
     padding: 20px 20px;
@@ -1255,13 +1261,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .gallery__prev-btn,
-  .gallery__next-btn {
-    padding: 20px 40px;
   }
 }
 
